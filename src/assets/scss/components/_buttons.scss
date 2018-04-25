@@ -1,0 +1,43 @@
+.btn,
+a.btn,
+button {
+	background: transparent;
+	border: 2px solid $foreground;
+	border-radius: .25rem;
+	color: $foreground;
+	cursor: pointer;
+	font-size: .9rem;
+	padding: .5rem 1rem;
+
+	&:hover {
+		opacity: .95;
+	}
+
+	&:active {
+		opacity: .9;
+	}
+
+	&.btn--primary {
+		background: $blue;
+		border-color: $blue;
+		color: $white;
+	}
+
+	&.btn--secondary {
+		background: $green;
+		border-color: $green;
+		color: $white;
+	}
+
+	&.btn--warning {
+		background: $orange;
+		border-color: $orange;
+		color: $white;
+	}
+
+	&.btn--danger {
+		background: $red;
+		border-color: $red;
+		color: $white;
+	}
+}

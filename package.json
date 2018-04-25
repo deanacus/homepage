@@ -1,0 +1,25 @@
+{
+  "name": "upstart",
+  "version": "0.0.1",
+  "description": "A very simple starting point for web projects",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deanacus/upstart"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dean Harris",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "latest",
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-cssmin": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-jsmin": "latest",
+    "gulp-rollup": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest"
+  }
+}

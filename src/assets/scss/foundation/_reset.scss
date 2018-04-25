@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body,
+div,
+header,
+footer,
+article,
+aside,
+main,
+section,
+nav,
+ol,
+ul,
+li,
+hr
+img,
+svg,
+form,
+label,
+legend,
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	transition-duration: 320ms;
+	transition-property: color, background-color, text-decoration;
+	transition-timing-function: cubic-bezier( 1, 0, 0, 1 );
+}

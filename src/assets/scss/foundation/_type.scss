@@ -1,0 +1,52 @@
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: $body;
+	line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $heading;
+	margin: .5em 0;
+}
+
+pre,
+code {
+	font-family: $code;
+}
+
+label,
+input,
+textarea,
+select {
+	font-family: $body;
+}
+
+h1 {
+	font-size: $type-title;
+	letter-spacing: -.1rem;
+}
+
+h2 {
+	font-size: $type-heading;
+}
+
+h3 {
+	font-size: $type-subheading;
+}
+
+h4 {
+	font-size: $type-large;
+}
+
+a:link,
+a:visited {
+	color: $orange;
+}

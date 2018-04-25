@@ -1,0 +1,5 @@
+// SHAMELESSLY STOLEN FROM BOURBON (https://github.com/thoughtbot/bourbon/)
+
+@function tint( $color, $percent ) {
+	@return mix( #fff, $color, $percent );
+}

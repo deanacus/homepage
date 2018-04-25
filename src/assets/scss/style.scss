@@ -1,0 +1,31 @@
+/**
+ * UPSTART SASS
+ *
+ */
+
+// Functions
+@import 'functions/tint';
+@import 'functions/shade';
+
+// Helpers
+@import 'helpers/variables';
+@import 'helpers/imports';
+
+// Mixins
+@import 'mixins/max';
+@import 'mixins/min';
+@import 'mixins/font-include';
+@import 'mixins/clearfix';
+@import 'mixins/centre-box';
+@import 'mixins/grid';
+
+// Foundation
+@import 'foundation/reset';
+@import 'foundation/type';
+
+// Components
+@import 'components/buttons';
+@import 'components/forms';
+
+// Layouts
+@import 'layouts/global';

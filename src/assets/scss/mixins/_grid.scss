@@ -1,0 +1,52 @@
+/**
+ * Simple little mixin to save time setting up a grid container
+ *
+ * Be warned, though - each direct child MUST be a grid element, or shit's
+ * gon' break, yo
+ */
+
+@mixin grid-container {
+	align-content: center;
+	align-items: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/**
+ *
+ * Simple grid item generator
+ *
+ * @param {number} $item-cols - the number of columns you want your grid item
+ * to take up
+ *
+ */
+
+@mixin grid( $item-cols ) {
+	flex-basis: 100%;
+	margin: ($grid-gutter-width / 2) 0;
+
+	@include min( 30rem ) {
+		flex: $item-cols $item-cols 0;
+		margin: 0 ($grid-gutter-width / 2);
+	}
+}
+
+
+/**
+ *
+ * Mixin to overwrite the margins of the first and last items of a grid-container
+ *
+ */
+@mixin grid-position ( $position: '' ) {
+	margin: ($grid-gutter-width / 2) 0;
+
+	@include min( 30rem ) {
+		@if ($position == 'first') {
+			margin: 0 ($grid-gutter-width / 2) 0 0;
+		}
+		@else if ($position == 'last' ) {
+			margin: 0 0 0 ($grid-gutter-width / 2);
+		}
+	}
+}
