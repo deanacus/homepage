@@ -1,25 +1,38 @@
 {
-  "name": "upstart",
-  "version": "0.0.1",
-  "description": "A very simple starting point for web projects",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/deanacus/upstart"
-  },
+  "name": "webpack-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production",
+    "watch": "webpack --mode=development --watch",
+    "lint": "sass-lint -v -q ./src/assets/scss/*/* && eslint ./src/assets/js/**",
+    "lint:sass": "sass-lint -v -q ./src/assets/scss/*/*",
+    "lint:js": "eslint ./src/assets/js/**",
+    "lint:js:fix": "eslint --fix ./src/assets/js/**"
   },
-  "author": "Dean Harris",
-  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": ".githooks/pre-commit"
+    }
+  },
   "devDependencies": {
-    "del": "latest",
-    "browser-sync": "latest",
-    "gulp": "latest",
-    "gulp-cssmin": "latest",
-    "gulp-imagemin": "latest",
-    "gulp-jsmin": "latest",
-    "gulp-rollup": "latest",
-    "gulp-sass": "latest",
-    "gulp-sourcemaps": "latest"
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.4.3",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "extract-loader": "^2.0.1",
+    "file-loader": "^1.1.11",
+    "husky": "^1.0.0-rc.13",
+    "node-sass": "^4.9.2",
+    "sass-lint": "^1.12.1",
+    "sass-loader": "^7.0.3",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
   }
 }

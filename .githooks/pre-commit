@@ -1,0 +1,32 @@
+# #!/bin/sh
+
+jsfiles=$(git diff --cached --name-only --diff-filter=ACM "*.js" "*.jsx" | tr '\n' ' ')
+sassfiles=$(git diff --cached --name-only --diff-filter=ACM "*.scss" "*.sass" | tr '\n' ' ')
+phpfiles=$(git diff --cached --name-only --diff-filter=ACM "*.php" | tr '\n' ' ')
+
+if [ ! -z "$jsfiles" ]; then
+    for file in $jsfiles
+    do
+        ./node_modules/.bin/eslint -o /dev/null $file
+        if [ $? -ne 0 ]; then
+            echo "\033[1;31m\xE2\x9C\x96 ESLint failed on '$file'. \n Commit aborted. Please fix your code and try again.\033[0m"
+            exit 1
+        fi
+    done
+    echo "\n\033[1;32m\xE2\x9C\x94 ESLint passed successfully.\n\033[0m"
+fi
+
+if [ ! -z "$sassfiles" ]; then
+    for file in $sassfiles
+    do
+        ./node_modules/.bin/sass-lint -q $file
+        if [ $? -ne 0 ]; then
+            echo "\033[1;31m\xE2\x9C\x96 Sass-lint failed on '$file'. \n Commit aborted. Please fix your code and try again.\033[0m"
+            exit 1
+        fi
+    done
+    echo "\n\033[1;32m\xE2\x9C\x94 Sass-lint passed successfully.\n\033[0m"
+fi
+
+
+exit 0

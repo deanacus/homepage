@@ -1,17 +1,17 @@
 @mixin font-face( $font-name, $weight: regular, $variant: normal ) {
-	@font-face {
-		$file-name: '';
+    @font-face {
+        $file-name: '';
 
-		@if ( $variant != 'normal' ) {
-			$file-name: "#{$font-name}-#{$weight}-#{$variant}";
-		}
-		@else {
-			$file-name: "#{$font-name}-#{$weight}";
-		}
+        @if ( $variant != 'normal' ) {
+            $file-name: "#{$font-name}-#{$weight}-#{$variant}";
+        }
+        @else {
+            $file-name: "#{$font-name}-#{$weight}";
+        }
 
-		font-family: $font-name;
-		font-style: $variant;
-		font-weight: #{$weight};
-		src: url( "/assets/fonts/#{$file-name}.woff2" ) format( "woff2" ), url( "/assets/fonts/#{$file-name}.woff" ) format( "woff" );
-	}
+        font-family: $font-name;
+        font-style: $variant;
+        font-weight: #{$weight};
+        src: url( "/assets/fonts/#{$file-name}.woff2" ) format( "woff2" ), url( "/assets/fonts/#{$file-name}.woff" ) format( "woff" );
+    }
 }

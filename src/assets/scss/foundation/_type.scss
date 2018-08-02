@@ -1,10 +1,10 @@
 html {
-	font-size: 100%;
+    font-size: 100%;
 }
 
 body {
-	font-family: $body;
-	line-height: 1.6;
+    font-family: $body;
+    line-height: 1.6;
 }
 
 h1,
@@ -13,44 +13,44 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $heading;
-	margin: .5em 0;
+    font-family: $heading;
+    margin: .5em 0;
 }
 
 pre,
 code {
-	font-family: $code;
+    font-family: $code;
 }
 
 label,
 input,
 textarea,
 select {
-	font-family: $body;
+    font-family: $body;
 }
 
 h1 {
-	font-size: $type-title;
-	letter-spacing: -.1rem;
+    font-size: $type-title;
+    letter-spacing: -.1rem;
 }
 
 h2 {
-	font-size: $type-heading;
+    font-size: $type-heading;
 }
 
 h3 {
-	font-size: $type-subheading;
+    font-size: $type-subheading;
 }
 
 h4 {
-	font-size: $type-large;
+    font-size: $type-large;
 }
 
 h5 {
-	font-size: $type-default;
+    font-size: $type-default;
 }
 
 a:link,
 a:visited {
-	color: $orange;
+    color: $orange;
 }

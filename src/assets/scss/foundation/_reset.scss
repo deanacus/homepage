@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,
@@ -24,18 +24,18 @@ form,
 label,
 legend,
 fieldset {
-	border: 0;
-	margin: 0;
-	padding: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
 img {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 a {
-	text-decoration: none;
-	transition-duration: 320ms;
-	transition-property: color, background-color, text-decoration;
-	transition-timing-function: cubic-bezier( 1, 0, 0, 1 );
+    text-decoration: none;
+    transition-duration: 320ms;
+    transition-property: color, background-color, text-decoration;
+    transition-timing-function: cubic-bezier( 1, 0, 0, 1 );
 }

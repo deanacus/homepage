@@ -6,11 +6,11 @@
  */
 
 @mixin grid-container {
-	align-content: center;
-	align-items: stretch;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+    align-content: center;
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /**
@@ -23,13 +23,13 @@
  */
 
 @mixin grid( $item-cols ) {
-	flex-basis: 100%;
-	margin: ($grid-gutter-width / 2) 0;
+    flex-basis: 100%;
+    margin: ($grid-gutter-width / 2) 0;
 
-	@include min( 30rem ) {
-		flex: $item-cols $item-cols 0;
-		margin: 0 ($grid-gutter-width / 2);
-	}
+    @include min( 30rem ) {
+        flex: $item-cols $item-cols 0;
+        margin: 0 ($grid-gutter-width / 2);
+    }
 }
 
 
@@ -39,14 +39,14 @@
  *
  */
 @mixin grid-position ( $position: '' ) {
-	margin: ($grid-gutter-width / 2) 0;
+    margin: ($grid-gutter-width / 2) 0;
 
-	@include min( 30rem ) {
-		@if ($position == 'first') {
-			margin: 0 ($grid-gutter-width / 2) 0 0;
-		}
-		@else if ($position == 'last' ) {
-			margin: 0 0 0 ($grid-gutter-width / 2);
-		}
-	}
+    @include min( 30rem ) {
+        @if ($position == 'first') {
+            margin: 0 ($grid-gutter-width / 2) 0 0;
+        }
+        @else if ($position == 'last' ) {
+            margin: 0 0 0 ($grid-gutter-width / 2);
+        }
+    }
 }
